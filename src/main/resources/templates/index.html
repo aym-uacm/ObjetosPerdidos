@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>App Objs Perdidos</title>
+	</head>
+	<body>
+		<h2>Aplicacion de Objetos Perdidos</h2>
+		<form method="post" th:action="@{/primerservlet/guardarObjeto}">
+			<input placeholder="Nombre" type="text" name="nombre"/>
+			<input placeholder="Descripcion" type="text" name="descripcion"/>
+			<input type="submit"></input>
+		</form>
+	</body>
+</html>
