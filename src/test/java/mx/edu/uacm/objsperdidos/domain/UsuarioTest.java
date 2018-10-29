@@ -34,7 +34,7 @@ public class UsuarioTest {
 		
 		Usuario usuario = new Usuario();
 		
-		usuario.setCorreo("aym.uacm@gmail.com");
+		usuario.setCorreo("aym.uacm4@gmail.com");
 		usuario.setNombre("profe");
 		usuario.setContrasena("123");
 		
@@ -73,7 +73,8 @@ public class UsuarioTest {
 		
 	
 		
-		Usuario usuario = usuarioRepository.findByCorreo("aym.uacm2@gmail.com"); //usuarioRepository.findById(new Long(2));
+		Usuario usuario = usuarioRepository.
+				findByCorreo("aym.uacm4@gmail.com"); //usuarioRepository.findById(new Long(2));
 		
 		//va a ser un select
 				List<ObjetoPerdido> objsObtenidos = 
@@ -82,6 +83,9 @@ public class UsuarioTest {
 				for (ObjetoPerdido objPerdido : objsObtenidos) {
 					log.info("Objeto perdido nombre: " + 
 							objPerdido.getNombre());
+					
+					log.info("El nombre del usuario: " +
+							objPerdido.getUsuario().getNombre());
 				}
 	}
 		
