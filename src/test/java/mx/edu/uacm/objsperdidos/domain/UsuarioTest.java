@@ -36,7 +36,7 @@ public class UsuarioTest {
 		
 		usuario.setCorreo("aym.uacm4@gmail.com");
 		usuario.setNombre("profe");
-		usuario.setContrasena("123");
+		usuario.setContrasena("uacm2018");
 		
 		
 		ObjetoPerdido objUSB = new ObjetoPerdido();

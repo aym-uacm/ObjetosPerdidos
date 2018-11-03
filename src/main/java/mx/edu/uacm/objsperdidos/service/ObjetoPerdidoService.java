@@ -5,4 +5,5 @@ import mx.edu.uacm.objsperdidos.domain.ObjetoPerdido;
 public interface ObjetoPerdidoService {
 
 	boolean guardarObjetoPerdido(ObjetoPerdido objPerdido);
+	
 }

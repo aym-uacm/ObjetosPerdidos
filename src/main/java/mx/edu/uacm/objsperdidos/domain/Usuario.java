@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.ColumnTransformer;
+
 
 
 @Entity
@@ -28,6 +30,7 @@ public class Usuario {
 	private String correo;
 	
 	@Column
+	@ColumnTransformer(write=" MD5(?) ")
 	private String contrasena;
 	
 	@OneToMany(mappedBy="usuario", 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Login de Objs Perdidos</title>
+	</head>
+	<body>
+		<h2>Login de Objetos Perdidos</h2>
+		<form method="post" th:action="@{/usuario/login}">
+			<input placeholder="Correo" type="email" name="correo"/>
+			<input placeholder="Password" type="password" name="contrasena"/>
+			<input type="submit"></input>
+		</form>
+	</body>
+</html>
