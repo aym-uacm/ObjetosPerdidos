@@ -1,4 +1,4 @@
-package mx.edu.uacm.objsperdidos.controller;
+package mx.edu.uacm.objsperdidos.test.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;

@@ -1,11 +1,13 @@
 package mx.edu.uacm.objsperdidos.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.edu.uacm.objsperdidos.domain.Usuario;
 import mx.edu.uacm.objsperdidos.repository.UsuarioRepository;
 import mx.edu.uacm.objsperdidos.service.UsuarioService;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@Autowired
@@ -20,7 +22,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 		/*
 		 * If
 		 * while
-		 * for each
+		 * for each<<<<<<<
 		 * case
 		 */
 		return usuarioRepository.findByCorreoAndContrasena(correo, contrasenia);
