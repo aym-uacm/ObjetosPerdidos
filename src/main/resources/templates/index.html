@@ -10,5 +10,12 @@
 			<input placeholder="Descripcion" type="text" name="descripcion"/>
 			<input type="submit"></input>
 		</form>
+		<br/>
+		<form method="post" th:action="@{/usuario/login}">
+			<input placeholder="correo" type="email" name="correo"/>
+			<input placeholder="contraseña" type="password" name="contrasena"/>
+			<input type="submit"/>
+		</form>
+		<p th:text="${session.userLoggedIn}"/>
 	</body>
 </html>

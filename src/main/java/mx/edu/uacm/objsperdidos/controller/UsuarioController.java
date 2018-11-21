@@ -40,6 +40,6 @@ public class UsuarioController {
 			httpSession.setAttribute("userLoggedIn",usuarioObtenido);
 		}
 		
-		return "login";
+		return "index";
 	}
 }

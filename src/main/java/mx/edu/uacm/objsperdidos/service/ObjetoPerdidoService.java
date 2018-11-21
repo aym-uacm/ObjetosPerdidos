@@ -6,4 +6,6 @@ public interface ObjetoPerdidoService {
 
 	boolean guardarObjetoPerdido(ObjetoPerdido objPerdido);
 	
+	//
+	
 }

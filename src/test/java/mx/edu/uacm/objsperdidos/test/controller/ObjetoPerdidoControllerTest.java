@@ -31,6 +31,7 @@ public class ObjetoPerdidoControllerTest {
 	@Test
 	public void testGuardarObjetoPerdido() throws Exception {
 		
+		//Simula una peticion post de http
 		log.debug("Entrando al metodo testGuardarObjetoPerdido");
 		mvc.perform(post("/primerservlet/guardarObjeto")
 				//.param("id", "10")

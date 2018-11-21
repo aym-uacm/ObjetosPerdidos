@@ -1,4 +1,4 @@
-package mx.edu.uacm.objsperdidos.domain;
+package mx.edu.uacm.objsperdidos.test.domain;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import mx.edu.uacm.objsperdidos.domain.ObjetoPerdido;
+import mx.edu.uacm.objsperdidos.domain.Usuario;
 import mx.edu.uacm.objsperdidos.repository.UsuarioRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
