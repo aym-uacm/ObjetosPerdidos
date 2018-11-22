@@ -33,6 +33,7 @@ public class ObjetoPerdidoTest {
 		//Guardar el obj en bd
 		objetoPerdidoRepository.save(objPerdido);
 		
+		
 		//buscar
 		//borrar
 		//actualizar

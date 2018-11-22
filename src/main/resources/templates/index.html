@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
+		<link rel="stylesheet" th:href="@{webjars/bootstrap/3.3.5/css/bootstrap.min.css}"/>
 		<title>App Objs Perdidos</title>
 	</head>
 	<body>
+	
+
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" th:href="@{/}">UACM</a>
+		    </div>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a th:href="@{/}"><span class="glyphicon glyphicon-home"></span> Inicio </a></li>
+		      <li><a th:href="@{/}"><span class="glyphicon glyphicon-user"></span> Autores </a></li>
+		    </ul>
+		  </div>
+		</nav> 
+
+	
 		<h2>Aplicacion de Objetos Perdidos</h2>
 		<form method="post" th:action="@{/primerservlet/guardarObjeto}">
 			<input placeholder="Nombre" type="text" name="nombre"/>
@@ -16,6 +32,13 @@
 			<input placeholder="contraseña" type="password" name="contrasena"/>
 			<input type="submit"/>
 		</form>
-		<p th:text="${session.userLoggedIn}"/>
+		<!--   <p th:text="${session.userLoggedIn}"/> -->
+		
+		<p th:if="${session.userLoggedIn}"><a th:href=@{/usuario/logout}>Salir</a></p>
+		<p th:unless="${session.userLoggedIn}"><a th:ref="@{/}">Entrar</a></p>
+		
+		<form>
+		
+		</form>
 	</body>
 </html>
