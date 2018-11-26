@@ -34,10 +34,21 @@
 		</form>
 		<!--   <p th:text="${session.userLoggedIn}"/> -->
 		
-		<p th:if="${session.userLoggedIn}"><a th:href=@{/usuario/logout}>Salir</a></p>
+"/Users/cerjio/Dropbox/workspace-aym/ObjetosPerdidos"		<p th:if="${session.userLoggedIn}"><a th:href=@{/usuario/logout}>Salir</a></p>
 		<p th:unless="${session.userLoggedIn}"><a th:ref="@{/}">Entrar</a></p>
 		
-		<form>
+		<form method="post" th:action="@{/usuario/recibir}">
+		
+			<input type="checkbox" name="colores" id="color1"  value="azul"/>
+			<label for="color1">Azul</label>
+			
+			<input type="checkbox" name="colores" id="color2"  value="verde"/>
+			<label for="color2">Verde</label>
+			
+			<input type="checkbox" name="colores" id="color3"  value="blanco"/>
+			<label for="color3">Blanco</label>
+			
+			<input type="submit"/>
 		
 		</form>
 	</body>

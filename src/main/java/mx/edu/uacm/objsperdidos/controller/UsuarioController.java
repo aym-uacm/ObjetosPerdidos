@@ -1,5 +1,6 @@
 package mx.edu.uacm.objsperdidos.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import mx.edu.uacm.objsperdidos.domain.Usuario;
 import mx.edu.uacm.objsperdidos.service.UsuarioService;
@@ -48,6 +50,14 @@ public class UsuarioController {
 	public String logout() {
 		
 		httpSession.removeAttribute("userLoggedIn");
+		
+		return "redirect:/";
+	}
+	
+	@PostMapping("/recibir")
+	public String recibe(Map <String, Object> model, @RequestParam("colores") List<String> colores) {
+		
+		log.info("El tamaño de la lista es: " + colores.size());
 		
 		return "redirect:/";
 	}
