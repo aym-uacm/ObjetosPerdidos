@@ -51,5 +51,21 @@
 			<input type="submit"/>
 		
 		</form>
+		
+		<select name="objetos" id="objetos">
+			<option value="0">Seleccione</option>
+			<option th:each="objPerdido : ${objsPerdidos}"
+					th:value="${objPerdido.id}"
+					th:text="${objPerdido.descripcion}">
+			</option>
+			
+			<ul th:each="objPerdido : ${objsPerdidos}">
+				<li>
+					<span th:text="${objPerdido.descripcion}"></span>
+				</li>
+			</ul>
+			
+		</select>
+		
 	</body>
 </html>

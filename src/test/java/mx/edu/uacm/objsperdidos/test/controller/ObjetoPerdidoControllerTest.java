@@ -1,6 +1,8 @@
 package mx.edu.uacm.objsperdidos.test.controller;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 
 import org.apache.logging.log4j.LogManager;
@@ -39,4 +41,14 @@ public class ObjetoPerdidoControllerTest {
 				.param("descripcion", "usb toshiba"))
 		.andExpect(redirectedUrl("/")) ;
 	}
+	
+	@Test
+	public void testObtenerObjetosPerdidosTodos() throws Exception {
+		
+		log.debug("Entrando al metodo testObtenerObjetosPerdidosTodos");
+		
+		mvc.perform(get("/primerservlet/obtenerObjsTodos")).
+		andExpect(model().attributeExists("objsPerdidos"));
+	}
+	
 }
